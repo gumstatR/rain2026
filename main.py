@@ -10,7 +10,7 @@ import matplotlib.font_manager as fm
 from matplotlib.path import Path
 from scipy.interpolate import griddata
 import streamlit as st
-import japanize_matplotlib
+import matplotlib_fontja
 
 
 matplotlib.rcParams['axes.unicode_minus'] = False
