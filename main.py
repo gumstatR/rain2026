@@ -9,7 +9,12 @@ from matplotlib.path import Path
 import json
 
 # 日本語フォント対応
-matplotlib.rcParams['font.family'] = 'Hiragino Sans'
+import platform
+if platform.system() == 'Darwin':
+    matplotlib.rcParams['font.family'] = 'Hiragino Sans'  # Mac用
+else:
+    matplotlib.rcParams['font.family'] = 'Noto Sans CJK JP'  # Linux (Streamlit Cloud) 用
+
 matplotlib.rcParams['axes.unicode_minus'] = False
 
 st.title("愛知県における東海豪雨と2026年雨量比較Webアプリ")
@@ -340,4 +345,4 @@ with col2:
 # #おまけ
 # #streamlit run main.pyでローカルで確認できる。
 # #初期設定①git init, ②git remote add origin https:/// 
-# #　①git add . ②git commit -m"◯◯◯".　③git push origin main
+# #　①git add . ②git commit -m"◯◯◯" .　③git push origin main
