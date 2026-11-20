@@ -197,5 +197,5 @@ with st.expander("年次推移データを見る"):
 
 
     # #streamlit run main.pyでローカルで確認できる。
-# #初期設定①git init, ②git remote add ofigin https:/// 
+# #初期設定①git init, ②git remote add origin https:/// 
 # #　①git add . ②git commit -m"◯◯◯".　③git push origin main
